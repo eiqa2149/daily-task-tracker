@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-olive font-sans text-brown antialiased;
+    min-height: 100vh;
+  }
+  :focus-visible {
+    outline: 3px solid #c56c91;
+    outline-offset: 2px;
+  }
+}
+
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
